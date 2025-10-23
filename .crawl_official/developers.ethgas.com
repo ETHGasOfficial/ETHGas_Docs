@@ -941,7 +941,7 @@ Kindly be informed that we are presently in BETA. As such, we are actively refin
 <td>1</td>
 <td>https://mainnet.app.ethgas.com/api</td>
 <td>wss://mainnet.app.ethgas.com/ws</td>
-<td>0x41c95AB9DBAC21B3992963Adf0e90F6478364b88</td>
+<td>0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3</td>
 </tr>
 <tr>
 <td>Testnet</td>
@@ -950,7 +950,7 @@ Kindly be informed that we are presently in BETA. As such, we are actively refin
 <td>0x88BB0</td>
 <td>https://hoodi.app.ethgas.com/api</td>
 <td>wss://hoodi.app.ethgas.com/ws</td>
-<td>0xe8bfB84b14c383b94365a895fc8bfA36dE236dc8</td>
+<td>0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1</td>
 </tr>
 <tr>
 <td>Testnet</td>
