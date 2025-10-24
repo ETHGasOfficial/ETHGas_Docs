@@ -11,8 +11,8 @@ Manage ETH collateral deposits as documented in the official ETHGas docs.
 
 | Environment | Contract Address |
 |-------------|------------------|
-| **Mainnet** | `0x41c95AB9DBAC21B3992963Adf0e90F6478364b88` |
-| **Hoodi (TestNet)** | `0xe8bfB84b14c383b94365a895fc8bfA36dE236dc8` |
+| **Mainnet** | `0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3` |
+| **Hoodi (TestNet)** | `0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1` |
 
 ## Deposit Process
 
