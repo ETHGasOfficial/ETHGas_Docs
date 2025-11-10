@@ -54,3 +54,4 @@ print(response.text)
 ## Related Pages
 
 - [SSV Validator APIs](/docs/api/validator/ssv)
+- [Obol Validator APIs](/docs/api/validator/obol)
