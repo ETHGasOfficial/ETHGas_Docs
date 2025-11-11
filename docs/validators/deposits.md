@@ -5,7 +5,7 @@ sidebar_label: Deposits
 
 # Deposits
 
-Manage ETH collateral deposits as documented in the official ETHGas docs.
+Collateral powers ETHGas’ promise of real-time execution—each deposit backs the preconfirmation commitments your validator makes. Approach it with the same diligence you give to validator keys: confirm the current contract, align on the latest limits, then move funds with confidence.
 
 ## Collateral Contracts
 
