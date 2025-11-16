@@ -669,13 +669,18 @@ blockquote {
 
 /* At-a-Glance cards */
 .glance-grid .glance-card-item {
-  border: 2px solid var(--ifm-color-primary);
-  transition: all 0.2s ease-in-out;
+  border: 2px solid var(--ifm-color-primary) !important;
+  border-radius: var(--ifm-card-border-radius) !important;
+  background: var(--ifm-card-background-color) !important;
+  padding: 1.25rem !important;
+  transition: all 0.2s ease-in-out !important;
   height: 100%;
+  box-shadow: var(--ifm-card-shadow) !important;
 }
 
 [data-theme='dark'] .glance-grid .glance-card-item {
-  border-color: var(--ifm-color-primary-light);
+  border-color: var(--ifm-color-primary-light) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .glance-grid .glance-card-item h4 {
@@ -685,8 +690,14 @@ blockquote {
 }
 
 .glance-grid .glance-card-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08) !important;
+  border: 2px solid var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .glance-grid .glance-card-item:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3) !important;
+  border-color: var(--ifm-color-primary-light) !important;
 }
 
 /* At-a-Glance section band */
