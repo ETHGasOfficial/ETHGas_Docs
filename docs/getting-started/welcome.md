@@ -109,7 +109,7 @@ Follow these steps to get started with ETHGas:
 <div className="checklist-box">
 
 <div className="row">
-  <div className="col col--4">
+  <div className="col col--6">
     <div className="feature-card text--center">
       <h3>1. Environment Setup</h3>
       <p>Configure your development environment and API credentials</p>
@@ -118,7 +118,7 @@ Follow these steps to get started with ETHGas:
       </a>
     </div>
   </div>
-  <div className="col col--4">
+  <div className="col col--6">
     <div className="feature-card text--center">
       <h3>2. Authentication</h3>
       <p>Set up API credentials and establish secure connections</p>
@@ -127,7 +127,10 @@ Follow these steps to get started with ETHGas:
       </a>
     </div>
   </div>
-  <div className="col col--4">
+</div>
+
+<div className="row" style={{ marginTop: '1rem' }}>
+  <div className="col col--6">
     <div className="feature-card text--center">
       <h3>3. API Testing</h3>
       <p>Test basic API calls and verify your integration</p>
@@ -136,10 +139,7 @@ Follow these steps to get started with ETHGas:
       </a>
     </div>
   </div>
-  </div>
-
-  <div className="row" style={{ marginTop: '0.5rem' }}>
-  <div className="col col--4">
+  <div className="col col--6">
     <div className="feature-card text--center">
       <h3>4. WebSocket Connection</h3>
       <p>Connect to real-time data streams for live updates</p>
@@ -148,7 +148,10 @@ Follow these steps to get started with ETHGas:
       </a>
     </div>
   </div>
-  <div className="col col--4">
+</div>
+
+<div className="row" style={{ marginTop: '1rem' }}>
+  <div className="col col--6">
     <div className="feature-card text--center">
       <h3>5. First Trade</h3>
       <p>Place your first order and start trading</p>
@@ -157,7 +160,7 @@ Follow these steps to get started with ETHGas:
       </a>
     </div>
   </div>
-  <div className="col col--4">
+  <div className="col col--6">
     <div className="feature-card text--center">
       <h3>6. Explore More</h3>
       <p>Dive deeper into advanced features and reference materials</p>
@@ -166,7 +169,7 @@ Follow these steps to get started with ETHGas:
       </a>
     </div>
   </div>
-  </div>
+</div>
 
 </div>
 
