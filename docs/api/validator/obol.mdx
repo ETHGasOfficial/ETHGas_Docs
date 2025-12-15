@@ -1,0 +1,552 @@
+---
+sidebar_position: 3
+sidebar_label: Obol Validator
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Obol Validator
+
+## API Endpoints
+
+<div className="api-endpoints-grid">
+
+### Register Obol operator
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/register` - Register Obol operator
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/register \
+  -d '{"ownerAddress":"0x1234","operatorId":1,"operatorPublicKey":"0xabc","signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/register"
+
+payload = {
+    "ownerAddress": "0x1234",
+    "operatorId": 1,
+    "operatorPublicKey": "0xabc",
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| ownerAddress | YES | String | Owner address for the Obol operator |
+| operatorId | YES | Integer | Unique operator identifier |
+| operatorPublicKey | YES | String | Obol operator public key |
+| signature | YES | String | Signature authorizing the registration |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+| operator | object | Registered operator object |
+
+</details>
+
+### Deregister Obol operator
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/deregister` - Deregister Obol operator
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/deregister \
+  -d '{"ownerAddress":"0x1234","operatorId":1,"signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/deregister"
+
+payload = {
+    "ownerAddress": "0x1234",
+    "operatorId": 1,
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| ownerAddress | YES | String | Owner address for the Obol operator |
+| operatorId | YES | Integer | Unique operator identifier |
+| signature | YES | String | Signature authorizing the deregistration |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+
+</details>
+
+### Verify Obol operator
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/verify` - Verify Obol operator
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/verify \
+  -d '{"ownerAddress":"0x1234","operatorId":1,"signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/verify"
+
+payload = {
+    "ownerAddress": "0x1234",
+    "operatorId": 1,
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| ownerAddress | YES | String | Owner address for the Obol operator |
+| operatorId | YES | Integer | Unique operator identifier |
+| signature | YES | String | Signature confirming ownership |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+
+</details>
+
+### Refresh Obol operator
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/refresh` - Refresh Obol operator
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/refresh \
+  -d '{"ownerAddress":"0x1234","operatorId":1,"signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/refresh"
+
+payload = {
+    "ownerAddress": "0x1234",
+    "operatorId": 1,
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| ownerAddress | YES | String | Owner address for the Obol operator |
+| operatorId | YES | Integer | Unique operator identifier |
+| signature | YES | String | Signature authorizing the refresh |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+
+</details>
+
+### Get Obol operators
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-get">**GET**</span> `/v1/user/obol/operators` - Get Obol operators
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X GET /v1/user/obol/operators
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operators"
+
+headers = {
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| operators | array of object | List of Obol operators |
+| └ operatorId | integer | Unique operator identifier |
+| └ ownerAddress | string | Owner address |
+| └ operatorPublicKey | string | Operator public key |
+| └ status | integer | Operator status |
+
+</details>
+
+### Get Obol validators
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-get">**GET**</span> `/v1/user/obol/operator/validators` - Get Obol validators
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X GET /v1/user/obol/operator/validators?operatorId=1
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/validators"
+
+params = {
+    "operatorId": 1
+}
+
+headers = {
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.get(url, headers=headers, params=params)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| operatorId | YES | Integer | Obol operator identifier |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| validators | array of object | List of validators registered with the Obol operator |
+| └ validatorPublicKey | string | Validator public key |
+| └ status | integer | Validator status |
+
+</details>
+
+### Register Obol validators
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/validator/register` - Register Obol validators
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/validator/register \
+  -d '{"operatorId":1,"validatorPublicKeys":["0xval1"],"signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/validator/register"
+
+payload = {
+    "operatorId": 1,
+    "validatorPublicKeys": ["0xval1"],
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| operatorId | YES | Integer | Obol operator identifier |
+| validatorPublicKeys | YES | Array of string | Validator public keys to register |
+| signature | YES | String | Signature authorizing the validator registration |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+
+</details>
+
+### Deregister Obol validators
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/validator/deregister` - Deregister Obol validators
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/validator/deregister \
+  -d '{"operatorId":1,"validatorPublicKeys":["0xval1"],"signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/validator/deregister"
+
+payload = {
+    "operatorId": 1,
+    "validatorPublicKeys": ["0xval1"],
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| operatorId | YES | Integer | Obol operator identifier |
+| validatorPublicKeys | YES | Array of string | Validator public keys to deregister |
+| signature | YES | String | Signature authorizing the validator deregistration |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+
+</details>
+
+### Update Obol validator OFAC flag
+
+<details className="api-endpoint">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/user/obol/operator/validator/update/ofac` - Update Obol validator OFAC flag
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/user/obol/operator/validator/update/ofac \
+  -d '{"operatorId":1,"validatorPublicKeys":["0xval1"],"ofac":true,"signature":"0xsig"}'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/user/obol/operator/validator/update/ofac"
+
+payload = {
+    "operatorId": 1,
+    "validatorPublicKeys": ["0xval1"],
+    "ofac": True,
+    "signature": "0xsig"
+}
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer {{access_token}}"
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+
+Request
+
+| Parameter | Required | Type | Description |
+| --- | --- | --- | --- |
+| operatorId | YES | Integer | Obol operator identifier |
+| validatorPublicKeys | YES | Array of string | Validator public keys to update |
+| ofac | YES | Boolean | Whether to mark validators as OFAC compliant |
+| signature | YES | String | Signature authorizing the OFAC update |
+
+
+Response Body
+
+| Name | Type | Description |
+| --- | --- | --- |
+| success | boolean | Operation success status |
+
+</details>
+
+</div>

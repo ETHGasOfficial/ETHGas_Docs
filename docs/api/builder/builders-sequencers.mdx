@@ -167,7 +167,7 @@ print(response.text)
 
 
 
-### GET /v1/builder/signingMessage
+### Get builder signing message
 
 <details className="api-endpoint" id="get-v1buildersigningmessage">
 <summary className="api-endpoint-header">
@@ -230,7 +230,7 @@ print(response.text)
 
 </details>
 
-### POST /v1/builder/deregister
+### Builder deregistering their public keys
 
 <details className="api-endpoint" id="post-v1builderderegister">
 <summary className="api-endpoint-header">
@@ -299,7 +299,7 @@ print(response.text)
 
 </details>
 
-### GET /v1/p/builders
+### Get public builders list
 
 <details className="api-endpoint" id="get-v1pbuilders">
 <summary className="api-endpoint-header">
@@ -393,6 +393,8 @@ print(response.text)
 
 </details>
 
+### Get user's builder keys
+
 <details className="api-endpoint" id="get-user-builder">
 <summary className="api-endpoint-header">
   <span className="api-method-get">**GET**</span> `/v1/user/builder` - Retrieve a list of builder public keys submitted by a user
@@ -449,6 +451,8 @@ print(response.text)
  |
 
 </details>
+
+### Delegate or revoke builder delegation
 
 <details className="api-endpoint" id="post-user-delegate-builder">
 <summary className="api-endpoint-header">
@@ -519,6 +523,8 @@ Note: User needs to delegate a new builder 2 seconds before the market close in 
 
 </details>
 
+### Get builder delegation settings
+
 <details className="api-endpoint" id="get-user-delegate-builder">
 <summary className="api-endpoint-header">
   <span className="api-method-get">**GET**</span> `/v1/user/delegate/builder` - Retrieve information about the current user's builder delegation settings
@@ -577,6 +583,8 @@ print(response.text)
 | └ delegatedBuilders | string[] | The delegated builder public key |
 
 </details>
+
+### Get builder for slot
 
 <details className="api-endpoint" id="get-p-builder-slot">
 <summary className="api-endpoint-header">
@@ -644,6 +652,8 @@ print(response.text)
 
 </details>
 
+### Get builder delegation info
+
 <details className="api-endpoint" id="get-builder-delegation">
 <summary className="api-endpoint-header">
   <span className="api-method-get">**GET**</span> `/v1/builder/delegation` - Retrieve comprehensive information about builder delegations and relationships
@@ -702,6 +712,248 @@ print(response.text)
 | └ builderDelegation | object | Mapping of builder delegations from corresponding builder key registered by the user |
 | └└  | string | Corresponding builder key registered by the user |
 | └└└  | string[] | EOA address who delegated to the builder key |
+
+</details>
+
+### Update OFAC flag for existing builder
+
+<details className="api-endpoint" id="post-builder-update-ofac">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/builder/update/ofac` - Update OFAC flag for existing builder
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/builder/update/ofac?publicKeys=0x12345...,0x2df345...&ofac=true
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/builder/update/ofac"
+
+payload = {
+    'publicKeys': '0x123456789abcdef...,0x2df345...',
+    'ofac': True
+}
+
+headers = {
+    'Authorization': 'Bearer <your-auth-token>',
+    'Content-Type': 'application/json'
+}
+
+response = requests.post(url, headers=headers, params=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+#### Request Parameters
+
+| Parameter | Required | Type | Description |
+|-----------|----------|------|-------------|
+| publicKeys | No | string | Comma separated list of builder bls public keys in hex. If not provided, updates all builders for the user |
+| ofac | Yes | boolean | OFAC flag for the builders (default: false) |
+
+#### Response Example
+
+```json
+{
+    "success": true
+}
+```
+
+#### Response Body
+
+| Field | Type | Description |
+|-------|------|-------------|
+| success | boolean | Whether API call is successful or not |
+
+</details>
+
+### Reject bundles for a specific slot
+
+<details className="api-endpoint" id="post-builder-bundle-reject">
+<summary className="api-endpoint-header">
+  <span className="api-method-post">**POST**</span> `/v1/builder/bundle/reject/{slot}` - Reject bundles for a specific slot
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+curl -H "Authorization: Bearer {{access_token}}" -X POST /v1/builder/bundle/reject/123 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "rejections": [
+      {
+        "uuid": "bundle-uuid-1",
+        "rejectCode": 1,
+        "txHashList": ["0x123...", "0x456..."],
+        "reason": "Bundle rejection reason"
+      }
+    ]
+  }'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/builder/bundle/reject/123"
+
+payload = {
+    "rejections": [
+        {
+            "uuid": "bundle-uuid-1",
+            "rejectCode": 1,
+            "txHashList": ["0x123...", "0x456..."],
+            "reason": "Bundle rejection reason"
+        }
+    ]
+}
+
+headers = {
+    'Authorization': 'Bearer <your-auth-token>',
+    'Content-Type': 'application/json'
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+#### Path Parameters
+
+| Parameter | Required | Type | Description |
+|-----------|----------|------|-------------|
+| slot | Yes | integer | Slot ID to reject bundles for |
+
+#### Request Body
+
+| Field | Required | Type | Description |
+|-------|----------|------|-------------|
+| rejections | Yes | array | List of bundle rejections |
+| └ uuid | Yes | string | Bundle UUID |
+| └ rejectCode | Yes | integer | Rejection code |
+| └ txHashList | Yes | string[] | List of transaction hashes |
+| └ reason | Yes | string | Rejection reason |
+
+#### Response Example
+
+```json
+{
+    "success": true
+}
+```
+
+#### Response Body
+
+| Field | Type | Description |
+|-------|------|-------------|
+| success | boolean | Whether API call is successful or not |
+
+#### Error Codes
+
+| Code | Description |
+|------|-------------|
+| INVALID_SLOT | Invalid slot ID (must be >= 0) |
+| BUNDLE_REJECTION_EMPTY | Rejections list cannot be empty |
+
+</details>
+
+### Get bundle rejection information
+
+<details className="api-endpoint" id="get-builder-bundle-reject">
+<summary className="api-endpoint-header">
+  <span className="api-method-get">**GET**</span> `/v1/p/builder/bundle/reject/{slot}/{builderAccountId}` - Get bundle rejection information for a specific slot and account
+</summary>
+
+**Code Example:**
+<Tabs>
+<TabItem value="http" label="HTTP" default>
+
+```bash
+GET /v1/p/builder/bundle/reject/123/456
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+url = "https://mainnet.app.ethgas.com/api/v1/p/builder/bundle/reject/123/456"
+
+headers = {
+    'Content-Type': 'application/json'
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+#### Path Parameters
+
+| Parameter | Required | Type | Description |
+|-----------|----------|------|-------------|
+| slot | Yes | integer | Slot ID to retrieve rejections |
+| builderAccountId | Yes | integer | Builder account ID |
+
+#### Response Example
+
+```json
+{
+    "success": true,
+    "data": {
+        "rejections": [
+            {
+                "uuid": "bundle-uuid-1",
+                "rejectCode": 1,
+                "txHashList": ["0x123...", "0x456..."],
+                "reason": "Bundle rejection reason"
+            }
+        ]
+    }
+}
+```
+
+#### Response Body
+
+| Field | Type | Description |
+|-------|------|-------------|
+| success | boolean | Success status of the request |
+| data | object | Response data container |
+| └ rejections | object[] | List of bundle rejections |
+| └└ uuid | string | Bundle UUID |
+| └└ rejectCode | integer | Rejection code |
+| └└ txHashList | string[] | List of transaction hashes |
+| └└ reason | string | Rejection reason |
+
+#### Error Codes
+
+| Code | Description |
+|------|-------------|
+| INVALID_SLOT | Invalid slot ID (must be > 0) |
+| INVALID_ACCOUNT_ID | Invalid account ID (must be > 0) |
 
 </details>
 

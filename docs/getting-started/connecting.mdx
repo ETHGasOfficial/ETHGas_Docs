@@ -347,13 +347,11 @@ async function login(privateKey) {
             const verifyData = verifyResponse.data.data;
             ApiClient.AccessToken = verifyData.accessToken.token;
             ApiClient.RefreshToken = extractRefreshToken(verifyResponse);
-            console.log(verifyData.accessToken.token)
             return {
                 accessToken: ApiClient.AccessToken,
                 refreshToken: ApiClient.RefreshToken,
             };
         } catch (error) {
-            console.log(error)
             console.error(`Login attempt ${attempt + 1} failed:`, error.message);
             if (attempt < maxRetries - 1) {
                 await delay(60000); // Wait for 1 minute before retrying
@@ -383,9 +381,7 @@ async function refreshAccessToken() {
 
             const refreshData = refreshResponse.data.data;
             ApiClient.AccessToken = refreshData.accessToken.token;
-
-            // console.log("New Access Token:", ApiClient.AccessToken);
-            return; // Exit after successful refresh
+            return;
         } catch (error) {
             console.error(`Refresh token attempt ${attempt + 1} failed:`, error.message);
             if (attempt < maxRetries - 1) {

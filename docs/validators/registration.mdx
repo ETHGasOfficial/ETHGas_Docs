@@ -7,6 +7,14 @@ sidebar_label: Registration
 
 Register your validators with ETHGas to start earning rewards through preconfirmation commitments and gas trading opportunities.
 
+## Next Steps
+
+After completing registration:
+
+1. **[Setup Guide](/docs/validators/setup)** - Configure your validator environment
+2. **[Collateral Management](/docs/validators/deposits)** - Manage your ETH deposits
+3. **[Monitoring & Analytics](/docs/validators/monitoring)** - Track your performance and earnings
+
 ## Prerequisites
 
 <div className="prerequisite-item">
@@ -20,7 +28,7 @@ Register your validators with ETHGas to start earning rewards through preconfirm
 </div>
 
 <div className="prerequisite-item">
-  <input type="checkbox" checked readOnly />
+  <input type="checkbox" checked readOnly />      
   <span><strong>Validator BLS key(s)</strong></span>
 </div>
 
@@ -55,7 +63,7 @@ import TabItem from '@theme/TabItem';
 
 | Contract Address |
 |------------------|
-| <code className="contract-address">`0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1`</code> |
+| <code className="contract-address">`0xe8bfB84b14c383b94365a895fc8bfA36dE236dc8`</code> |
 
 {/* **Recommendation**: Deposit collateral via the [ETHGas TestNet](https://testnet.ethgas.com) */}
 
@@ -64,7 +72,7 @@ import TabItem from '@theme/TabItem';
 
 | Contract Address |
 |------------------|
-| <code className="contract-address">`0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3`</code> |
+| <code className="contract-address">`0x41c95AB9DBAC21B3992963Adf0e90F6478364b88`</code> |
 
 {/* **Recommendation**: Deposit collateral via the [ETHGas website](https://ethgas.com) */}
 
@@ -128,7 +136,7 @@ Deposit ETH as collateral to secure your preconfirmation commitments:
 <TabItem value="mainnet-deposit" label="MainNet" default>
 
 **MainNet Deposit**:
-- **Contract**: `0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3`
+- **Contract**: `0x41c95AB9DBAC21B3992963Adf0e90F6478364b88`
 - **Method**: Deposit via [ETHGas Dashboard](https://app.ethgas.com/my-portfolio/accounts)
 - **Minimum**: 1 ETH per validator
 - **Purpose**: Secure preconfirmation commitments
@@ -137,7 +145,7 @@ Deposit ETH as collateral to secure your preconfirmation commitments:
 <TabItem value="testnet-deposit" label="TestNet">
 
 **TestNet Deposit**:
-- **Contract**: `0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1`
+- **Contract**: `0xe8bfB84b14c383b94365a895fc8bfA36dE236dc8`
 - **Method**: Deposit via [ETHGas Dashboard](https://app.ethgas.com/my-portfolio/accounts)
 - **Minimum**: 0.1 ETH per validator (testnet)
 - **Purpose**: Test preconfirmation commitments
@@ -172,16 +180,19 @@ chain_id = 1         # or 17000 for testnet
 ### Support Resources
 
 - **[ETHGas Website](https://ethgas.com)** - Main platform
-- **[ETHGas TestNet](https://testnet.ethgas.com)** - Test environment
-- **[GitHub Organization](https://github.com/ethgas-developer)** - All source code and tools
+- **[ETHGas Github](https://github.com/ethgas-developer)** - All source code and tools
 
-## Next Steps
+## Distributed Validator Integrations
 
-After completing registration:
+**SSV Validators**
+- **Purpose**: Operate validators through SSV Network distributed infrastructure
+- **Accounts**: Requires at least one registered SSV operator in ETHGas
+- **API quick links**: [SSV Validator APIs](/docs/api/validator/ssv)
 
-1. **[Setup Guide](/docs/validators/setup)** - Configure your validator environment
-2. **[Collateral Management](/docs/validators/deposits)** - Manage your ETH deposits
-3. **[Monitoring & Analytics](/docs/validators/monitoring)** - Track your performance and earnings
+**Obol Validators**
+- **Purpose**: Run distributed validators via Obol’s DVT integration
+- **Accounts**: Requires at least one registered Obol operator in ETHGas
+- **API quick links**: [Obol Validator APIs](/docs/api/validator/obol)
 
 ## Troubleshooting
 
