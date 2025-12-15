@@ -601,6 +601,20 @@ blockquote {
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 
+.checklist-box .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.checklist-box .row .col.col--6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 /* Real-time Infrastructure mini-cards */
 .infra-cards .infra-card {
   border: 2px solid var(--ifm-color-primary);
@@ -3314,6 +3328,14 @@ details li strong:first-child:contains("POST") {
     padding-right: 0 !important;
   }
   
+  .checklist-box .row .col.col--6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
   .feature-card {
     padding: 2rem !important;
     margin-bottom: 1.5rem !important;
@@ -3689,6 +3711,14 @@ details li strong:first-child:contains("POST") {
     width: 100% !important;
     margin-bottom: 2rem !important;
     padding: 0 !important;
+  }
+  
+  .checklist-box .row .col.col--6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   
   
