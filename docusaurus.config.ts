@@ -34,9 +34,6 @@ const config: Config = {
       src: '/js/sidebar-tabs.js',
       type: 'text/javascript',
     },
-
-
-
   ],
 
   presets: [
@@ -45,8 +42,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/ethgas/ethgas-docs/tree/main/',
+          editUrl: undefined,
         },
         blog: {
           showReadingTime: true,
@@ -54,8 +50,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl:
-            'https://github.com/ethgas/ethgas-docs/tree/main/',
+          editUrl: undefined,
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',

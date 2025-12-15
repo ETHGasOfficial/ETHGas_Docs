@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Handle navbar link clicks with a more aggressive approach
+  // Handle navbar link clicks
   function handleNavbarClick(href) {
     let targetCategory = null;
     
