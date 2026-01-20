@@ -142,6 +142,37 @@ table td {
   table-layout: auto !important;
 }
 
+.contract-address,
+.relay-endpoint {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  color: #f6aa11 !important;
+  background: var(--ifm-code-background);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.95em;
+  padding: 0.2rem 0.35rem;
+  border-radius: 4px;
+}
+
+.theme-doc-markdown .contract-address,
+.theme-doc-markdown .relay-endpoint {
+  color: #f6aa11 !important;
+}
+
+.relay-endpoint a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.theme-doc-markdown table td,
+.theme-doc-markdown table th {
+  min-width: 0;
+}
+
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-1 > .theme-doc-sidebar-item-link,
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-2 > .theme-doc-sidebar-item-link,
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-3 > .theme-doc-sidebar-item-link,
@@ -3790,7 +3821,7 @@ details li strong:first-child:contains("POST") {
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    width: 100vw !important;
+    width: 100% !important;
     height: 100vh !important;
     background: rgba(17, 25, 39, 0.98) !important;
     backdrop-filter: blur(10px) !important;
