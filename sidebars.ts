@@ -77,7 +77,6 @@ const sidebars: SidebarsConfig = {
             'reference/data-types/market',
             'reference/data-types/order',
             'reference/data-types/token',
-            'reference/official-coverage',
             'reference/lookup-tables',
             'reference/error-codes',
           ],
