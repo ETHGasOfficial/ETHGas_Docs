@@ -1025,7 +1025,7 @@ The TestNet environment is designed for development and testing purposes:
 
 | Environment | Chain | API Base URL | WebSocket Base URL | Collateral Contract |
 |-------------|-------|--------------|-------------------|-------------------|
-| Testnet | Hoodi Chain | `https://hoodi.app.ethgas.com/api` | `wss://hoodi.app.ethgas.com/ws` | `0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1` |
+| Testnet | Hoodi Chain | `https://hoodi.app.ethgas.com/api` | `wss://hoodi.app.ethgas.com/ws` | <code className="contract-address">0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1</code> |
 
 ### Configuration
 
@@ -1062,7 +1062,7 @@ The MainNet environment is for production use:
 
 | Environment | Chain | API Base URL | WebSocket Base URL | Collateral Contract |
 |-------------|-------|--------------|-------------------|-------------------|
-| Mainnet | Ethereum  | `https://mainnet.app.ethgas.com/api` | `wss://mainnet.app.ethgas.com/ws` | `0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3` |
+| Mainnet | Ethereum  | `https://mainnet.app.ethgas.com/api` | `wss://mainnet.app.ethgas.com/ws` | <code className="contract-address">0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3</code> |
 
 ### Configuration
 
@@ -1497,10 +1497,10 @@ Official relay endpoints by region:
 
 | Region | Environment | Endpoint |
 |--------|-------------|----------|
-| **Tokyo** | Mainnet | `https://0x88ef3061f598101ca713d556cf757763d9be93d33c3092d3ab6334a36855b6b4a4020528dd533a62d25ea6648251e62e@ap-relay.ethgas.com` |
-| **Tokyo** | Hoodi | `https://0xb20c3fe59db9c3655088839ef3d972878d182eb745afd8abb1dd2abf6c14f93cd5934ed4446a5fe1ba039e2bc0cf1011@hoodi-relay.ethgas.com` |
-| **Frankfurt** | Mainnet | `https://0x88ef3061f598101ca713d556cf757763d9be93d33c3092d3ab6334a36855b6b4a4020528dd533a62d25ea6648251e62e@eu-relay.ethgas.com` |
-| **Virginia** | Mainnet | `https://0x88ef3061f598101ca713d556cf757763d9be93d33c3092d3ab6334a36855b6b4a4020528dd533a62d25ea6648251e62e@us-relay.ethgas.com` |
+| **Tokyo** | Mainnet | <span className="relay-endpoint">https://0x88ef3061f598101ca713d556cf757763d9be93d33c3092d3ab6334a36855b6b4a4020528dd533a62d25ea6648251e62e@ap-relay.ethgas.com</span> |
+| **Tokyo** | Hoodi | <span className="relay-endpoint">https://0xb20c3fe59db9c3655088839ef3d972878d182eb745afd8abb1dd2abf6c14f93cd5934ed4446a5fe1ba039e2bc0cf1011@hoodi-relay.ethgas.com</span> |
+| **Frankfurt** | Mainnet | <span className="relay-endpoint">https://0x88ef3061f598101ca713d556cf757763d9be93d33c3092d3ab6334a36855b6b4a4020528dd533a62d25ea6648251e62e@eu-relay.ethgas.com</span> |
+| **Virginia** | Mainnet | <span className="relay-endpoint">https://0x88ef3061f598101ca713d556cf757763d9be93d33c3092d3ab6334a36855b6b4a4020528dd533a62d25ea6648251e62e@us-relay.ethgas.com</span> |
 
 :::info Relay Usage
 Prepend the key as shown in the endpoint URLs for authentication.
