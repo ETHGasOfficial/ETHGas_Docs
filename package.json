@@ -6,6 +6,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 3002",
+    "start:search": "docusaurus build && docusaurus serve --port 3002",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -16,10 +17,10 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-
     "@cookbookdev/docsbot": "^4.25.11",
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
+    "@easyops-cn/docusaurus-search-local": "^0.52.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",

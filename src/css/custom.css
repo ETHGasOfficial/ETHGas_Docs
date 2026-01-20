@@ -76,6 +76,12 @@ h3 {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar__brand,
 .navbar__item,
 .navbar__link {
@@ -90,6 +96,12 @@ h3 {
 .navbar__link--active {
   color: var(--ifm-color-primary);
   font-weight: 600;
+}
+
+.navbar__items--right-custom .navbar-search-item {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
 }
 
 [data-theme='dark'] .navbar__brand,
@@ -3936,21 +3948,20 @@ details li strong:first-child:contains("POST") {
 }
 
 
-.navbar__items--right {
+.navbar__items--right-custom {
   position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
-.navbar__items--right::before {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 20px;
-  margin: 0 8px;
-  background-color: var(--ifm-color-emphasis-300);
-}
 
 
-.navbar__items--right .navbar__item:last-child {
+.navbar__items--right-custom .navbar__item:last-child {
   position: relative;
 }
 

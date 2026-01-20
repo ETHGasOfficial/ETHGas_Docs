@@ -61,6 +61,15 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+      },
+    ],
+  ],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
@@ -91,6 +100,7 @@ const config: Config = {
         {
           type: 'search',
           position: 'right',
+          className: 'navbar-search-item',
         },
       ],
       hideOnScroll: false,
