@@ -3797,8 +3797,8 @@ details li strong:first-child:contains("POST") {
     z-index: 1000 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
   }
   
   
@@ -3824,7 +3824,7 @@ details li strong:first-child:contains("POST") {
   .navbar-sidebar .menu__list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.5rem !important;
+    gap: 0.25rem !important;
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -3834,32 +3834,30 @@ details li strong:first-child:contains("POST") {
   .navbar-sidebar .menu__link {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 1.5rem 2rem !important;
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    border-radius: 12px !important;
+    justify-content: flex-start !important;
+    padding: 0.9rem 1.25rem !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
     color: white !important;
-    font-size: 1.25rem !important;
+    font-size: 1rem !important;
     font-weight: 500 !important;
     text-decoration: none !important;
-    text-align: center !important;
-    transition: all 0.3s ease !important;
-    min-height: 60px !important;
+    text-align: left !important;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+    min-height: 44px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     cursor: pointer !important;
-    pointer-events: auto !important; 
+    pointer-events: auto !important;
     position: relative !important;
     z-index: 1002 !important;
   }
   
   .navbar-sidebar .menu__link:hover {
-    background: rgba(0, 162, 199, 0.3) !important;
-    border-color: rgba(0, 162, 199, 0.5) !important;
-    color: #00A2C7 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(0, 162, 199, 0.2) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
   }
   
   
@@ -3886,16 +3884,16 @@ details li strong:first-child:contains("POST") {
 
   
   .navbar-sidebar .navbar-sidebar__items {
-    padding: 0 !important;
+    padding: 5.5rem 1.25rem 2rem !important;
     display: flex !important;
     flex-direction: column !important;
-    position: absolute !important;
-    left: 50% !important;
-    top: 60% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 85% !important;
-    max-width: 320px !important;
-    gap: 1.5rem !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 0.25rem !important;
     z-index: 1000 !important;
   }
   
@@ -3910,18 +3908,18 @@ details li strong:first-child:contains("POST") {
   .navbar-sidebar .navbar-sidebar__link {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 1.5rem 2rem !important;
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    border-radius: 12px !important;
+    justify-content: flex-start !important;
+    padding: 0.9rem 1.25rem !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
     color: white !important;
-    font-size: 1.25rem !important;
+    font-size: 1rem !important;
     font-weight: 500 !important;
     text-decoration: none !important;
-    text-align: center !important;
-    transition: all 0.3s ease !important;
-    min-height: 60px !important;
+    text-align: left !important;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+    min-height: 44px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     cursor: pointer !important;
@@ -3933,17 +3931,15 @@ details li strong:first-child:contains("POST") {
   .navbar-sidebar .navbar-sidebar__link:hover,
   .navbar-sidebar .navbar-sidebar__link:active,
   .navbar-sidebar .navbar-sidebar__link:focus {
-    background: rgba(0, 162, 199, 0.3) !important;
-    border-color: rgba(0, 162, 199, 0.5) !important;
-    color: #00A2C7 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(0, 162, 199, 0.2) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
   }
   
   .navbar-sidebar .navbar-sidebar__link--active {
-    background: rgba(0, 162, 199, 0.3) !important;
-    border-color: #00A2C7 !important;
-    color: #00A2C7 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
   }
 }
 
