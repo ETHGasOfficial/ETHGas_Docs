@@ -173,6 +173,57 @@ table td {
   min-width: 0;
 }
 
+.quick-nav .row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem !important;
+}
+
+.quick-nav .col {
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 996px) {
+  .quick-nav .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quick-nav .row {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.quick-nav .feature-card {
+  min-height: 210px;
+  padding: 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .quick-nav .feature-card {
+    min-height: 230px;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .quick-nav .feature-card {
+    min-height: 220px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quick-nav .feature-card {
+    min-height: auto;
+  }
+}
+
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-1 > .theme-doc-sidebar-item-link,
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-2 > .theme-doc-sidebar-item-link,
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-3 > .theme-doc-sidebar-item-link,
