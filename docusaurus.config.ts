@@ -189,6 +189,8 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
+    // Disable theme toggle on mobile only.
+    // We'll hide the control via CSS to keep desktop behavior unchanged.
   } satisfies Preset.ThemeConfig,
 };
 

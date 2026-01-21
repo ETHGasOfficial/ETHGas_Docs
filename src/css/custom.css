@@ -4050,16 +4050,21 @@ details li strong:first-child:contains("POST") {
     display: none !important;
   }
 
-  [data-theme='light'] .navbar__toggle,
-  [data-theme='light'] .navbar__toggle svg {
-    color: #ffffff !important;
-    fill: #ffffff !important;
-  }
-
   .navbar__toggle,
   .navbar__toggle svg {
     color: #ffffff !important;
     fill: #ffffff !important;
+  }
+
+  .clean-btn[aria-label*="theme"],
+  .clean-btn[aria-label*="Theme"],
+  .clean-btn[aria-label*="light"],
+  .clean-btn[aria-label*="dark"],
+  .navbar__item:has(.clean-btn[aria-label*="theme"]),
+  .navbar__item:has(.clean-btn[aria-label*="Theme"]),
+  .navbar__item:has(.clean-btn[aria-label*="light"]),
+  .navbar__item:has(.clean-btn[aria-label*="dark"]) {
+    display: none !important;
   }
 }
 
@@ -4090,7 +4095,7 @@ details li strong:first-child:contains("POST") {
   .navbar__item:has(.clean-btn[aria-label*="Theme"]),
   .navbar__item:has(.clean-btn[aria-label*="light"]),
   .navbar__item:has(.clean-btn[aria-label*="dark"]) {
-    display: inline-flex !important;
+    display: none !important;
   }
 
   .navbar__items--right-custom .navbar-search-item {
@@ -4099,11 +4104,6 @@ details li strong:first-child:contains("POST") {
 
   .navbar__items--right-custom .navbar__item {
     order: 2;
-  }
-
-  .navbar__items--right-custom .colorModeToggle {
-    order: 2;
-    margin-left: 0.5rem;
   }
   
   
