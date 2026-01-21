@@ -4138,6 +4138,16 @@ details li strong:first-child:contains("POST") {
     color: #00A2C7 !important;
   }
 
+  .navbar-sidebar .menu__list .menu__list .menu__link {
+    color: var(--ifm-color-primary-light) !important;
+  }
+
+  .navbar-sidebar .menu__list .menu__list .menu__link:hover,
+  .navbar-sidebar .menu__list .menu__list .menu__link--active {
+    color: var(--ifm-color-primary) !important;
+  }
+
+
   .navbar-sidebar .menu__link--sublist-caret::after,
   .navbar-sidebar .menu__caret {
     color: #ffffff !important;
