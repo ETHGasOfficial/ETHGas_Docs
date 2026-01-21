@@ -34,6 +34,11 @@ const config: Config = {
       src: '/js/sidebar-tabs.js',
       type: 'text/javascript',
     },
+    {
+      src: '/js/navbar-section.js',
+      type: 'text/javascript',
+      defer: true,
+    },
   ],
 
   presets: [
@@ -96,6 +101,12 @@ const config: Config = {
           label: 'Validators',
           position: 'left',
           activeBaseRegex: '^/docs/validators/',
+        },
+        {
+          type: 'html',
+          value: '<span class="navbar-section-label" aria-live="polite"></span>',
+          position: 'left',
+          className: 'navbar-section-item',
         },
         {
           type: 'search',
@@ -178,6 +189,8 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
+    // Disable theme toggle on mobile only.
+    // We'll hide the control via CSS to keep desktop behavior unchanged.
   } satisfies Preset.ThemeConfig,
 };
 

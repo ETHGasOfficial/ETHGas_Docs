@@ -130,20 +130,11 @@ You can combine this with your own system metrics (CPU, memory, disk, node logs)
 
 ### Common Issues
 
-1. **Service Won't Start**
-   - Check Docker installation
-   - Verify environment configuration
-   - Review container logs
-
-2. **Connection Issues**
-   - Verify network connectivity
-   - Check API endpoint URLs
-   - Validate authentication credentials
-
-3. **Performance Problems**
-   - Monitor system resources
-   - Check consensus client logs
-   - Review validator configuration
+| Issue | Checks |
+|-------|--------|
+| **Service Won't Start** | ✅ Check Docker installation<br />✅ Verify environment configuration<br />✅ Review container logs |
+| **Connection Issues** | ✅ Verify network connectivity<br />✅ Check API endpoint URLs<br />✅ Validate authentication credentials |
+| **Performance Problems** | ✅ Monitor system resources<br />✅ Check consensus client logs<br />✅ Review validator configuration |
 
 ### Getting Help
 

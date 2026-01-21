@@ -198,6 +198,7 @@ table td {
   }
 }
 
+
 .quick-nav .feature-card {
   min-height: 210px;
   padding: 1.5rem !important;
@@ -4044,19 +4045,17 @@ details li strong:first-child:contains("POST") {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 996px) {
   .navbar__title {
     display: none !important;
   }
-}
 
-
-@media screen and (max-width: 768px) {
-  .navbar__title {
-    display: none !important;
+  .navbar__toggle,
+  .navbar__toggle svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
   }
-  
-  
+
   .clean-btn[aria-label*="theme"],
   .clean-btn[aria-label*="Theme"],
   .clean-btn[aria-label*="light"],
@@ -4067,10 +4066,44 @@ details li strong:first-child:contains("POST") {
   .navbar__item:has(.clean-btn[aria-label*="dark"]) {
     display: none !important;
   }
+}
+
+
+@media screen and (max-width: 996px) {
+  .navbar__title {
+    display: none !important;
+  }
   
   
   .navbar__items--left .navbar__item {
     display: none !important;
+  }
+
+  .navbar__items--left .navbar-section-item {
+    display: inline-flex !important;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ifm-color-content);
+  }
+
+  .clean-btn[aria-label*="theme"],
+  .clean-btn[aria-label*="Theme"],
+  .clean-btn[aria-label*="light"],
+  .clean-btn[aria-label*="dark"],
+  .navbar__item:has(.clean-btn[aria-label*="theme"]),
+  .navbar__item:has(.clean-btn[aria-label*="Theme"]),
+  .navbar__item:has(.clean-btn[aria-label*="light"]),
+  .navbar__item:has(.clean-btn[aria-label*="dark"]) {
+    display: none !important;
+  }
+
+  .navbar__items--right-custom .navbar-search-item {
+    order: 1;
+  }
+
+  .navbar__items--right-custom .navbar__item {
+    order: 2;
   }
   
   
@@ -4103,6 +4136,22 @@ details li strong:first-child:contains("POST") {
   .navbar-sidebar .navbar__link--active {
     background: rgba(0, 162, 199, 0.2) !important;
     color: #00A2C7 !important;
+  }
+
+  .navbar-sidebar .menu__list .menu__list .menu__link {
+    color: var(--ifm-color-primary-light) !important;
+  }
+
+  .navbar-sidebar .menu__list .menu__list .menu__link:hover,
+  .navbar-sidebar .menu__list .menu__list .menu__link--active {
+    color: var(--ifm-color-primary) !important;
+  }
+
+
+  .navbar-sidebar .menu__link--sublist-caret::after,
+  .navbar-sidebar .menu__caret {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
   }
 }
 
